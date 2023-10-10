@@ -769,6 +769,6 @@ def sample_numpyro_nuts(
             **idata_kwargs,
         )
     else:
-        az_trace = to_trace(posterior=posterior, **idata_kwargs)
+        az_trace = to_trace(posterior=mcmc_samples, **idata_kwargs)
 
     return az_trace
